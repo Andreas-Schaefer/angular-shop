@@ -17,28 +17,28 @@
           {
             "title": "Third level group 4",
             "link": "products/group4level3",
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Product Group Image",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem, consequatur dicta doloremque doloribus, est facere modi perferendis perspiciatis quam quod, ut voluptatem voluptatum. Animi beatae id odio quis sed?"
           },
           {
             "title": "Third level group 5",
             "link": "products/group5level3",
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Product Group Image",
             "description": "Animi beatae id odio quis sed?"
           },
           {
             "title": "Third level group 6",
             "link": "products/group6level3",
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Product Group Image",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae id odio quis sed?"
           },
           {
             "title": "Third level group 7",
             "link": "products/group7level3",
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Product Group Image",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem, consequatur dicta doloremque doloribus, est facere modi perferendis perspiciatis quam quod, ut voluptatem voluptatum. Animi beatae id odio quis sed?"
           }
@@ -62,28 +62,28 @@
           {
             "title": "Drittes Level Gruppe 4",
             "link": "products/group4level3",
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Produktgruppen Bild",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem, consequatur dicta doloremque doloribus, est facere modi perferendis perspiciatis quam quod, ut voluptatem voluptatum. Animi beatae id odio quis sed?"
           },
           {
             "title": "Drittes Level Gruppe 5",
             "link": "products/group5level3",
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Produktgruppen Bild",
             "description": "Animi beatae id odio quis sed?"
           },
           {
             "title": "Drittes Level Gruppe 6",
             "link": "products/group6level3",
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Produktgruppen Bild",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae id odio quis sed?"
           },
           {
             "title": "Drittes Level Gruppe 7",
             "link": "products/group7level3",
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Produktgruppen Bild",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem, consequatur dicta doloremque doloribus, est facere modi perferendis perspiciatis quam quod, ut voluptatem voluptatum. Animi beatae id odio quis sed?"
           }
