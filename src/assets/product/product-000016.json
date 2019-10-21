@@ -8,15 +8,15 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem, consequatur dicta doloremque doloribus, est facere modi perferendis perspiciatis quam quod, ut voluptatem voluptatum. Animi beatae id odio quis sed?",
         "images": [
           {
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Product image 1"
           },
           {
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Product image 2"
           },
           {
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Product image 3"
           }
         ],
@@ -44,15 +44,15 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem, consequatur dicta doloremque doloribus, est facere modi perferendis perspiciatis quam quod, ut voluptatem voluptatum. Animi beatae id odio quis sed?",
         "images": [
           {
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Produktbild 1"
           },
           {
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Produktbild 2"
           },
           {
-            "imagePath": "../../assets/img/card-sample.png",
+            "imagePath": "http://andreas-schaefer.bplaced.net/img/card-sample.png",
             "imageAlt": "Produktbild 3"
           }
         ],

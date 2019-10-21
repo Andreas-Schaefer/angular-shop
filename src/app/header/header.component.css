@@ -120,14 +120,14 @@
 
 /* Icons */
 .header-menu {
-  background-image: url("../../assets/img/menu.png");
+  background-image: url("http://andreas-schaefer.bplaced.net/img/menu.png");
   cursor: pointer;
   margin-top: 12px;
   margin-left: 4px;
 }
 
 .header-search {
-  background-image: url("../../assets/img/search.png");
+  background-image: url("http://andreas-schaefer.bplaced.net/img/search.png");
   cursor: pointer;
   margin-top: 12px;
 }
@@ -137,7 +137,7 @@
 }
 
 .header-cart-empty {
-  background-image: url("../../assets/img/cart-empty.png");
+  background-image: url("http://andreas-schaefer.bplaced.net/img/cart-empty.png");
   cursor: pointer;
   margin-top: 12px;
   margin-right: 4px;
@@ -149,7 +149,7 @@
 }
 
 .header-cart-filled {
-  background-image: url("../../assets/img/cart-filled.png");
+  background-image: url("http://andreas-schaefer.bplaced.net/img/cart-filled.png");
   cursor: pointer;
   margin-top: 12px;
   margin-right: 4px;
@@ -161,13 +161,13 @@
 }
 
 .header-categories-menu-open {
-  background-image: url("../../assets/img/arrow-down.png"); /* TODO switch usage to styles.css definition*/
+  background-image: url("http://andreas-schaefer.bplaced.net/img/arrow-down.png"); /* TODO switch usage to styles.css definition*/
   cursor: pointer;
   margin-right: 4px;
 }
 
 .header-categories-menu-close {
-  background-image: url("../../assets/img/categories-close.png");
+  background-image: url("http://andreas-schaefer.bplaced.net/img/categories-close.png");
   cursor: pointer;
   margin-right: 4px;
 }
