@@ -69,7 +69,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize', [])
   onResize() {
     this.sizeMode = detectSizeMode(window.innerWidth);
     if (this.sizeMode !== SizeMode.MOBILE) {
@@ -125,7 +125,7 @@ export class HeaderComponent implements OnInit {
       this.activePage = this.readCurrentPageFromCategories();
     } else {
       const searchPath = this.currentUrl.substring(1);  // the first '/' from the current url must be removed!
-      this.activePage = this.menuService.getDisplayForPath(this.currentUrl.substring(1));
+      this.activePage = this.menuService.getDisplayForPath(searchPath);
     }
   }
 

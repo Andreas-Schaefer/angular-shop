@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "shop": {
+    "angular-shop": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/shop",
+            "outputPath": "dist/angular-shop",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,7 +31,7 @@
           "configurations": {
             "de": {
               "aot": true,
-              "outputPath": "dist/shop-de/",
+              "outputPath": "dist/angular-shop-de/",
               "i18nFile": "src/locale/messages.de.xlf",
               "i18nFormat": "xlf",
               "i18nLocale": "de"
@@ -78,7 +78,7 @@
               "extractCss": true,
               "namedChunks": false,
               "aot": true,
-              "outputPath": "dist/shop-production-de/",
+              "outputPath": "dist/angular-shop-production-de/",
               "i18nFile": "src/locale/messages.de.xlf",
               "i18nFormat": "xlf",
               "i18nLocale": "de",
@@ -103,24 +103,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "shop:build"
+            "browserTarget": "angular-shop:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "shop:build:production"
+              "browserTarget": "angular-shop:build:production"
             },
             "production-de": {
-              "browserTarget": "shop:build:production-de"
+              "browserTarget": "angular-shop:build:production-de"
             },
             "de": {
-              "browserTarget": "shop:build:de"
+              "browserTarget": "angular-shop:build:de"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "shop:build"
+            "browserTarget": "angular-shop:build"
           }
         },
         "test": {
@@ -157,15 +157,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "shop:serve"
+            "devServerTarget": "angular-shop:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "shop:serve:production"
+              "devServerTarget": "angular-shop:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "shop"
+    }
+  },
+  "defaultProject": "angular-shop"
 }

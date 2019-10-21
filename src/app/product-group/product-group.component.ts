@@ -39,7 +39,7 @@ export class ProductGroupComponent implements OnInit {
         }))));
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize', [])
   onResize() {
     this.sizeMode = detectSizeMode(window.innerWidth);
     this.updateCardStyle();

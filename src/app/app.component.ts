@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     this.sizeMode = detectSizeMode(window.innerWidth);
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize', [])
   onResize() {
     this.sizeMode = detectSizeMode(window.innerWidth);
   }
