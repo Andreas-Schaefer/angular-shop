@@ -15,7 +15,7 @@ export class MenuService {
   }
 
   public getProducts() {
-    return this.http.get<Menus>('/assets/menu.json')
+    return this.http.get<Menus>('/angular-shop/assets/menu.json')
       .pipe(map(data => {
         for (const localeMenu of data.localeMenus) {
           if (localeMenu.locale === this.localeId) {
@@ -28,7 +28,7 @@ export class MenuService {
   }
 
   public getOther() {
-    return this.http.get<Menus>('/assets/menu.json')
+    return this.http.get<Menus>('/angular-shop/assets/menu.json')
       .pipe(map(data => {
         for (const localeMenu of data.localeMenus) {
           if (localeMenu.locale === this.localeId) {

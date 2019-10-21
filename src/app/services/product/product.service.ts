@@ -18,7 +18,7 @@ export class ProductService implements OnDestroy {
     if (this.productCache.has(path)) {
       return of(this.productCache.get(path));
     }
-    return this.http.get<Product>('/assets/product/product-' + path + '.json')
+    return this.http.get<Product>('/angular-shop/assets/product/product-' + path + '.json')
       .pipe(map(data => {
         for (const localeProduct of data.localeProducts) {
           if (localeProduct.locale === this.localeId) {

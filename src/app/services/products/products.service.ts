@@ -13,7 +13,7 @@ export class ProductsService {
   }
 
   public getProducts(path: string): Observable<ProductContent> {
-    return this.http.get<Products>('/assets/products/products-' + path + '.json')
+    return this.http.get<Products>('/angular-shop/assets/products/products-' + path + '.json')
       .pipe(map(data => {
         for (const localeProduct of data.localeProducts) {
           if (localeProduct.locale === this.localeId) {

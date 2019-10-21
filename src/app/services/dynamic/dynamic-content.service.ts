@@ -12,7 +12,7 @@ export class DynamicContentService {
   }
 
   public getDynamicContent(path) {
-    return this.http.get<DynamicElements>('/assets/dynamic/' + path + '.json')
+    return this.http.get<DynamicElements>('/angular-shop/assets/dynamic/' + path + '.json')
       .pipe(map(data => {
         for (const localeDynamicElement of data.localeDynamicElements) {
           if (localeDynamicElement.locale === this.localeId) {
