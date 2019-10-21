@@ -1,0 +1,21 @@
+.container {
+
+}
+
+.previous {
+  background-image: url("../../assets/img/prev.png");
+  cursor: pointer;
+  margin: 12px;
+}
+
+.next {
+  background-image: url("../../assets/img/next.png");
+  cursor: pointer;
+  margin: 12px;
+}
+
+.spacer {
+  width: 64px;
+  height: 64px;
+  margin: 12px;
+}

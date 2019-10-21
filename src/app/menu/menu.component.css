@@ -1,0 +1,29 @@
+@media (max-width: 512px) {
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    text-align: center;
+  }
+}
+
+.close-entry {
+  cursor: pointer;
+  font-size: x-large;
+}
+
+.menu-entry {
+  padding: 8px;
+  white-space: nowrap;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid #FF7700;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}

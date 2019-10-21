@@ -1,0 +1,22 @@
+.row {
+  width: 100%;
+}
+
+.column {
+  float: left;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.detail-label {
+  padding-right: 16px;
+}
+
+.detail-input
+
+@media (max-width: 512px) {
+  .column {
+    width: 100%;
+    float-wrap: wrap;
+  }
+}

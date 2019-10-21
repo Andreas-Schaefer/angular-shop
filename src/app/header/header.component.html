@@ -1,0 +1,112 @@
+<div [focusObserver]="searchFocusObserver" appFocus cssSelector=".header-search-input"></div>
+<!-- Mobile -->
+<div *ngIf="sizeMode === 0" class="bg-color-primary header-container">
+  <div class="flex">
+    <div class="center">
+      <a routerLink=""><img class="logo" src="../../assets/img/logo.png"
+                            alt="Shop Logo" i18n-alt="@@header-logo-alt"></a>
+      <div class="header-text" i18n="@@header-text">bee shopping</div>
+    </div>
+  </div>
+  <div class="flex toolbar">
+    <div class="left">
+      <div class="header-menu icon" (click)="onMenu()"
+           i18n-title="@@header-menu-title" title="open menu"></div>
+    </div>
+    <div *ngIf="!searchFieldVisible" class="center active-category">{{ activePage }}</div>
+    <div class="right">
+      <div *ngIf="searchFieldVisible" class="header-search-area">
+        <input #search (keyup.enter)=" onSearch(search.value);"
+               aria-label="search" class="header-search-input" i18n-placeholder="@@header-search-placeholder"
+               placeholder="Search" type="search">
+        <div (click)="onSearch(search.value);" class="header-search icon"
+             i18n-title="@@header-search-title" title="open search"></div>
+      </div>
+      <div (click)="onOpenSearch();" *ngIf="!searchFieldVisible" class="header-search icon"
+           i18n-title="@@header-search-title" title="open search"></div>
+      <div class="icon" [ngClass]="styleCart" (click)="onCart();"
+           i18n-title="@@header-cart-title" title="open shopping cart"></div>
+      <div class="icon" [ngClass]="categoriesOpened ? 'header-categories-menu-close' : 'header-categories-menu-open'"
+           (click)="onCategories();"
+           i18n-title="@@header-categories-menu-title" title="open categories"></div>
+    </div>
+  </div>
+</div>
+<div [ngClass]="menuOpened && sizeMode === 0 ? '' : 'hide'" class="menu-overlay">
+  <app-menu (hideMenu)="onMenu()"></app-menu>
+</div>
+<div *ngIf="categoriesOpened && sizeMode === 0" class="categories-overlay bg-color-primary">
+  <div>
+    <div *ngFor="let category of categories | async">
+      <a class="color-primary" [routerLink]="['/category', category.path]" (click)="onCategories()">
+        <div [ngClass]="categoriesArray.indexOf(category) % 2 === 0 ? 'header-overlay-category-zebra' : ''"
+             class="header-overlay-category hover-dark">
+          {{ category.display }}
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Tablet -->
+<div *ngIf="sizeMode === 1" class="bg-color-primary header-container">
+  <div class="flex">
+    <div class="left">
+      <div class="header-menu icon" (click)="onMenu()"
+           i18n-title="@@header-menu-title" title="open menu"></div>
+      <a routerLink=""><img class="logo" src="../../assets/img/logo.png"
+                            i18n-alt="@@header-logo-alt" alt="Shop Logo"></a>
+      <div class="header-text" i18n="@@header-text">bee shopping</div>
+    </div>
+    <div class="right">
+      <div *ngIf="searchFieldVisible" class="header-search-area">
+        <input #search (keyup.enter)="onSearch(search.value);"
+               aria-label="search" class="header-search-input" i18n-placeholder="@@header-search-placeholder"
+               placeholder="Search" type="search">
+        <div (click)="onSearch(search.value);" class="header-search icon"
+             i18n-title="@@header-search-title" title="open search"></div>
+      </div>
+      <div (click)="onOpenSearch();" *ngIf="!searchFieldVisible" class="header-search icon"
+           i18n-title="@@header-search-title" title="open search"></div>
+      <div class="icon" [ngClass]="styleCart" (click)="onCart();"
+           i18n-title="@@header-cart-title" title="open shopping cart"></div>
+    </div>
+  </div>
+  <div class="flex">
+    <div class="subheader-categories right">
+      <div *ngFor="let category of categories | async" routerLinkActive="active-link">
+        <a [routerLink]="['/category', category.path]" class="header-category hover-dark">{{ category.display }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div [ngClass]="menuOpened && sizeMode === 1 ? '' : 'hide'" class="menu-overlay bg-color-secondary">
+  <app-menu (hideMenu)="onMenu()"></app-menu>
+</div>
+<!-- Desktop -->
+<div *ngIf="sizeMode === 2" class="bg-color-primary header-container">
+  <div class="flex">
+    <div class="left">
+      <a routerLink=""><img class="logo" src="../../assets/img/logo.png"
+                            i18n-alt="@@header-logo-alt" alt="Shop Logo"></a>
+      <div class="header-text" i18n="@@header-text">bee shopping</div>
+    </div>
+    <div class="right">
+      <div class="header-categories">
+        <div *ngFor="let category of categories | async" routerLinkActive="active-link">
+          <a [routerLink]="['/category', category.path]" class="header-category hover-dark">{{ category.display }}</a>
+        </div>
+      </div>
+      <div *ngIf="searchFieldVisible" class="header-search-area">
+        <input #search (keyup.enter)="onSearch(search.value);"
+               aria-label="search" class="header-search-input" i18n-placeholder="@@header-search-placeholder"
+               placeholder="Search" type="search">
+        <div (click)="onSearch(search.value);" class="header-search icon"
+             i18n-title="@@header-search-title" title="open search"></div>
+      </div>
+      <div (click)="onOpenSearch();" *ngIf="!searchFieldVisible" class="header-search icon"
+           i18n-title="@@header-search-title" title="open search"></div>
+      <div class="icon" [ngClass]="styleCart" (click)="onCart();"
+           i18n-title="@@header-cart-title" title="open shopping cart"></div>
+    </div>
+  </div>
+</div>

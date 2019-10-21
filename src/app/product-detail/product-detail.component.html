@@ -1,0 +1,31 @@
+<ng-container *ngIf="productDetail">
+  <h1>{{ productDetail.title }}</h1>
+  <div class="row">
+    <div class="column-container">
+      <div class="column">
+        <!--    <img *ngIf="(productDetail | async).images.length === 1"-->
+        <!--         [src]="(productDetail | async).images[0].imagePath" [alt]="(productDetail | async).images[0].imageAlt">-->
+        <img [alt]="productDetail.images[0].imageAlt" [src]="productDetail.images[0].imagePath">
+      </div>
+    </div>
+    <div class="column-container">
+      <p>{{ productDetail.description }}</p>
+      <div>
+        <form>
+          <label for="option" class="detail-label">Option</label>
+          <select [(ngModel)]="selectedOption" name="option" class="detail-input">
+            <option id="option" *ngFor="let option of productDetail.options" [ngValue]="option">
+              {{ option.display }}
+            </option>
+          </select>
+          <p>
+            <span class="detail-label">Price</span>
+            <span class="detail-input">{{ selectedOption.price | currency : 'EUR' }}</span></p>
+        </form>
+      </div>
+      <p></p>
+      <div>
+      </div>
+    </div>
+  </div>
+</ng-container>

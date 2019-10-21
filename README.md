@@ -1,3 +1,4 @@
-# angular-xnkidb
+# shop
+Simple shop application with angular that can be used to sell some products.
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-xnkidb)
+This is still in work!!!

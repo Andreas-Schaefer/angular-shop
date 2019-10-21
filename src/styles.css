@@ -1,1 +1,127 @@
-/* Add application styles & imports to this file! */
+body {
+  margin: 0;
+  font-family: Calibri, sans-serif;
+}
+
+* {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FF7700;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+button {
+  background-color: #FF7700;
+  color: #FFFFFF;
+  border: 0;
+  font-size: large;
+  padding: 8px;
+  min-width: 150px;
+}
+
+button:focus {
+  font-weight: bold;
+}
+
+input:focus, input:active, input:hover, textarea:focus, textarea:active, textarea:hover {
+  border: 1px solid #FF7700;
+  padding: 2px;
+}
+
+input, textarea {
+  padding: 2px;
+}
+
+textarea {
+  resize: none;
+}
+
+.bg-color-primary {
+  background-color: #FF7700;
+}
+
+.bg-color-secondary {
+  background-color: #FFFFFF;
+}
+
+.color-primary {
+  color: #FFFFFF;
+}
+
+.color-secondary {
+  color: #FF7700;
+}
+
+.flex {
+  display: flex;
+}
+
+.left {
+  display: inherit;
+  margin-right: auto;
+}
+
+.center {
+  display: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.right {
+  display: inherit;
+  margin-left: auto;
+}
+
+.icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  min-height: 32px;
+}
+
+.img-button {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 64px;
+  min-width: 64px;
+  height: 64px;
+  min-height: 64px;
+}
+
+.hover-light:hover {
+  background-color: rgba(255, 119, 0, 0.1);
+}
+
+.hover-dark:hover {
+  background-color: #FF9955 !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+@media (min-width: 1025px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 513px) and (max-width: 1024px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media (max-width: 512px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
