@@ -49,7 +49,7 @@ export class ContactComponent implements OnInit {
     return this.contactForm.get('message');
   }
 
-  @HostListener('window:keyup')
+  @HostListener('window:input')
   updateMessageLength() {
     this.messageLength = 1000 - this.renderer.selectRootElement('#messageBox').value.length;
   }
