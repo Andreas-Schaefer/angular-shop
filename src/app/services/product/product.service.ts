@@ -25,13 +25,7 @@ export class ProductService implements OnDestroy {
             return localeProduct.productDetail;
           }
         }
-        return {
-          description: '',
-          images: [],
-          link: '',
-          options: [],
-          title: ''
-        };
+        return null;
       }))
       .pipe(tap(productDetail => this.productCache.set(path, productDetail)));
   }

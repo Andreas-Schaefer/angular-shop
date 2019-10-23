@@ -4,7 +4,7 @@ body {
 }
 
 * {
-  outline: none;
+  outline: none !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,13 +19,23 @@ button {
   background-color: #FF7700;
   color: #FFFFFF;
   border: 0;
-  font-size: large;
+  font-size: 1em;
   padding: 8px;
   min-width: 150px;
+  cursor: pointer;
 }
 
 button:focus {
-  font-weight: bold;
+  background-color: #EE6611 !important;
+}
+
+button:active {
+  background-color: #FF9955;
+}
+
+button:disabled {
+  background-color: #AD5800 !important;
+  cursor: unset;
 }
 
 input:focus, input:active, input:hover, textarea:focus, textarea:active, textarea:hover {

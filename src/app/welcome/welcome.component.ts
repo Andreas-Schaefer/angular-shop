@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {CartService} from '../services/cart/cart.service';
+import {DynamicContentService} from '../services/dynamic/dynamic-content.service';
 
 @Component({
   selector: 'app-welcome',
@@ -7,17 +7,12 @@ import {CartService} from '../services/cart/cart.service';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
+  elements;
 
-  constructor(private cart: CartService) { }
+  constructor(private contentService: DynamicContentService) {
+  }
 
   ngOnInit() {
-  }
-
-  addProductToCart() {
-    this.cart.addItem({id: '00001'}, 1);
-  }
-
-  removeProductFromCart() {
-    this.cart.removeItem({id: '00001'}, 1);
+    this.elements = this.contentService.getDynamicContent('welcome');
   }
 }

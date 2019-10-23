@@ -1,30 +1,39 @@
 <ng-container *ngIf="productDetail">
   <h1>{{ productDetail.title }}</h1>
   <div class="row">
-    <div class="column-container">
-      <div class="column">
-        <!--    <img *ngIf="(productDetail | async).images.length === 1"-->
-        <!--         [src]="(productDetail | async).images[0].imagePath" [alt]="(productDetail | async).images[0].imageAlt">-->
-        <img [alt]="productDetail.images[0].imageAlt" [src]="productDetail.images[0].imagePath">
+    <div class="column">
+      <div class="image-showcase">
+        <img style="" [alt]="selectedImage.imageAlt" [src]="selectedImage.imagePath">
+        <!-- TODO add image switcher component-->
       </div>
     </div>
-    <div class="column-container">
+    <div class="column">
       <p>{{ productDetail.description }}</p>
-      <div>
-        <form>
-          <label for="option" class="detail-label">Option</label>
-          <select [(ngModel)]="selectedOption" name="option" class="detail-input">
-            <option id="option" *ngFor="let option of productDetail.options" [ngValue]="option">
-              {{ option.display }}
-            </option>
-          </select>
-          <p>
-            <span class="detail-label">Price</span>
-            <span class="detail-input">{{ selectedOption.price | currency : 'EUR' }}</span></p>
-        </form>
+      <form>
+        <div class="flex baseline">
+          <label for="option" class="detail-label" i18n="@@product-detail-option-label">Option</label>
+          <div class="select-wrapper">
+            <select [(ngModel)]="selectedOption" name="option" (ngModelChange)="onOptionChange()">
+              <option id="option" *ngFor="let option of productDetail.options" [ngValue]="option">
+                {{ option.display }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="flex baseline">
+          <span class="detail-label" i18n="@@product-detail-price-label">Price</span>
+          <span class="detail-value">{{ selectedOption.price | currency : 'EUR' }}</span>
+        </div>
+      </form>
+      <div class="flex baseline">
+        <span class="detail-label" i18n="@@product-detail-in-cart-label">In cart</span>
+        <span class="flex detail-value">{{ cartSum }}</span>
       </div>
-      <p></p>
-      <div>
+      <div class="flex baseline">
+        <span class="detail-label"></span>
+        <button class="small-button" (click)="onAdd()">+</button>
+        <button class="small-button" [disabled]="cartSum === 0" (click)="onSub()">-</button>
+        <button class="clear-button" [disabled]="cartSum === 0" (click)="onClear()">Clear</button>
       </div>
     </div>
   </div>

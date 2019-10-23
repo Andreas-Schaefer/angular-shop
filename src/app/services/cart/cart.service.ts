@@ -6,7 +6,9 @@ import {Injectable} from '@angular/core';
 export class CartService {
   cart = new Map(); // stores product id as key and number as value
   registeredChangeFunctions = [];
-  constructor() {}
+
+  constructor() {
+  }
 
   public registerOnChange(changeFunction: () => void) {
     this.registeredChangeFunctions.push(changeFunction);
@@ -16,30 +18,31 @@ export class CartService {
     this.registeredChangeFunctions.forEach(changeFunction => changeFunction());
   }
 
-  public addItem(product, count) {
-    if (count === 0) {
-      return;
-    }
-    if (!this.cart.has(product.id)) {
-      this.cart.set(product.id, count);
+  public addItem(id) {
+    if (!this.cart.has(id)) {
+      this.cart.set(id, 1);
     } else {
-      const currentCount = this.cart.get(product.id);
-      this.cart.set(product.id, currentCount + count);
+      const currentCount = this.cart.get(id);
+      this.cart.set(id, currentCount + 1);
     }
     this.triggerChangeFunctions();
   }
 
-  public removeItem(product, count) {
-    if (count === 0) {
-      return;
-    }
-    if (this.cart.has(product.id)) {
-      if (this.cart.get(product.id) <= count) {
-        this.cart.delete(product.id);
+  public removeItem(id) {
+    if (this.cart.has(id)) {
+      if (this.cart.get(id) <= 1) {
+        this.cart.delete(id);
       } else {
-        const currentCount = this.cart.get(product.id);
-        this.cart.set(product.id, currentCount - count);
+        const currentCount = this.cart.get(id);
+        this.cart.set(id, currentCount - 1);
       }
+    }
+    this.triggerChangeFunctions();
+  }
+
+  public clearItem(id) {
+    if (this.cart.has(id)) {
+      this.cart.delete(id);
     }
     this.triggerChangeFunctions();
   }
@@ -54,6 +57,10 @@ export class CartService {
   }
 
   public getCart() {
-    return this.cart;
+    return new Map(this.cart);
+  }
+
+  public getItemCount(id: string) {
+    return this.cart.has(id) ? this.cart.get(id) : 0;
   }
 }

@@ -8,6 +8,7 @@ export interface LocaleProduct {
 }
 
 export interface ProductDetail {
+  id: string;
   title: string;
   link: string;
   description: string;
@@ -21,6 +22,7 @@ export interface ImageData {
 }
 
 export interface Option {
+  id: string;
   display: string;
   price: number;
 }

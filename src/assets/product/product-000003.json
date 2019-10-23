@@ -3,6 +3,7 @@
     {
       "locale": "en-US",
       "productDetail": {
+        "id": "000003",
         "title": "Product 000003",
         "link": "product/000003",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem, consequatur dicta doloremque doloribus, est facere modi perferendis perspiciatis quam quod, ut voluptatem voluptatum. Animi beatae id odio quis sed?",
@@ -22,14 +23,17 @@
         ],
         "options": [
           {
+            "id": "000003-A",
             "display": "red",
             "price": 25.0
           },
           {
+            "id": "000003-B",
             "display": "green",
             "price": 30.0
           },
           {
+            "id": "000003-C",
             "display": "blue",
             "price": 27.0
           }
@@ -39,6 +43,7 @@
     {
       "locale": "de",
       "productDetail": {
+        "id": "000003",
         "title": "Produkt 000003",
         "link": "product/000003",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem, consequatur dicta doloremque doloribus, est facere modi perferendis perspiciatis quam quod, ut voluptatem voluptatum. Animi beatae id odio quis sed?",
@@ -58,14 +63,17 @@
         ],
         "options": [
           {
+            "id": "000003-A",
             "display": "rot",
             "price": 25.0
           },
           {
+            "id": "000003-B",
             "display": "grün",
             "price": 30.0
           },
           {
+            "id": "000003-C",
             "display": "blau",
             "price": 27.0
           }
